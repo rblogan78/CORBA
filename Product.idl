@@ -1,0 +1,6 @@
+module Product{
+    interface Description{
+        private string productDescription;
+        string getDescription();
+    };
+};
