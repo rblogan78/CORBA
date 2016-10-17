@@ -40,3 +40,21 @@ public class HelloServer
 		}
 	}
 }
+
+class ProductImpl extends ProductPOA{
+
+  private ORB orb;
+  private String productDescription = "Apples";
+
+  public void setORB(ORB orb_val){
+    orb = orb_val;
+  }
+  
+  public String getDescription(){
+    return productDescription;
+  }
+  
+  public void shutdown(){
+    orb.shutdown(false);
+  }
+}
