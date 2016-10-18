@@ -1,6 +1,7 @@
-module Product{
-    interface Description{
-        private string productDescription;
+module ProductApp
+{
+    interface Product
+    {
         string getDescription();
     };
 };

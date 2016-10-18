@@ -20,10 +20,7 @@ public class ProductClient
 			String description = productRef.getDescription();
 			System.out.println(description);
 
-		}
-		catch (Exception e)
-		{
-
+		}catch (Exception e){
 			e.printStackTrace();
 		}
 	}
