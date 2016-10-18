@@ -13,14 +13,24 @@ public class ProductClient
 			ORB orb = ORB.init(args, null);
 			org.omg.CORBA.Object objRef = orb.resolve_initial_references("NameService");
 			
-			String name = "first";
-			NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
-			Product productRef = ProductHelper.narrow(ncRef.resolve_str(name));
+			String name1 = "first";
+			NamingContextExt ncRef1 = NamingContextExtHelper.narrow(objRef);
+			Product productRef1 = ProductHelper.narrow(ncRef1.resolve_str(name1));
 			
-			String description = productRef.getDescription();
-			System.out.println(description);
+			String description1 = productRef1.getDescription();
+			System.out.println(description1);
 
-		}catch (Exception e){
+			String name2 = "second";
+			NamingContextExt ncRef2 = NamingContextExtHelper.narrow(objRef);
+			Product productRef2 = ProductHelper.narrow(ncRef2.resolve_str(name2));
+			
+			String description2 = productRef2.getDescription();
+			System.out.println(description2);
+
+
+		}
+		catch (Exception e)
+		{
 			e.printStackTrace();
 		}
 	}
