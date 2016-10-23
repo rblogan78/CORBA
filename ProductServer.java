@@ -15,7 +15,7 @@ public class ProductServer
     		ORB orb = ORB.init(args, null);
 			  POA rootpoa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
 			  rootpoa.the_POAManager().activate();
-				
+
      		ProductImpl productImpl1 = new ProductImpl();
         productImpl1.setORB(orb);
         productImpl1.setDescription("Apple");
